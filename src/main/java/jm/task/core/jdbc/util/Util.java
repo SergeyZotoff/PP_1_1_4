@@ -10,15 +10,18 @@ public class Util {
     private static final String username = "root";
     private static final String password = "root2503";
     private static final String url = "jdbc:mysql://localhost:3306/test";
+    private static Connection connection;
 
-    public static Connection getConnection() throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
-        Connection connection = null;
+    static {
         try {
-            Class.forName(DB_Driver).getDeclaredConstructor().newInstance();
+            Class.forName(DB_Driver);
             connection = DriverManager.getConnection(url, username, password);
-        } catch (ClassNotFoundException | SQLException e) {
+        } catch (Exception e ) {
             e.printStackTrace();
         }
+    }
+
+    public static Connection getConnection() {
         return connection;
     }
 }

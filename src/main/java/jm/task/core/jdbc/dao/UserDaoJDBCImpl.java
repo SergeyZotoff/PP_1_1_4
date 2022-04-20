@@ -12,7 +12,7 @@ import java.util.List;
 import static java.sql.DriverManager.getConnection;
 
 public class UserDaoJDBCImpl   implements UserDao {
-    private final Connection connection = getConnection();
+    private final Connection connection = Util.getConnection();
 
     public UserDaoJDBCImpl() throws InvocationTargetException,
             NoSuchMethodException, InstantiationException, IllegalAccessException {
