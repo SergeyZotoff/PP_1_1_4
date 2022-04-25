@@ -14,8 +14,7 @@ public class UserServiceImpl extends Util implements UserService, UserDao {
 
     UserDaoJDBCImpl userDaoJDBC = new UserDaoJDBCImpl();
 
-    public UserServiceImpl() throws InvocationTargetException, NoSuchMethodException,
-            InstantiationException, IllegalAccessException {
+    public UserServiceImpl() throws SQLException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
     }
 
     public void createUsersTable() throws SQLException {

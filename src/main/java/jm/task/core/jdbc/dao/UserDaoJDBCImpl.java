@@ -12,10 +12,10 @@ import java.util.List;
 import static java.sql.DriverManager.getConnection;
 
 public class UserDaoJDBCImpl   implements UserDao {
-    private final Connection connection = Util.getConnection();
+    private final Connection connection = Util.getInstance().getConnection();
 
     public UserDaoJDBCImpl() throws InvocationTargetException,
-            NoSuchMethodException, InstantiationException, IllegalAccessException {
+            NoSuchMethodException, InstantiationException, IllegalAccessException, SQLException {
     }
 
     public void createUsersTable() throws SQLException {

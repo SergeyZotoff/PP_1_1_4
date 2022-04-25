@@ -1,5 +1,6 @@
 package jm.task.core.jdbc;
 
+import jm.task.core.jdbc.dao.UserDao;
 import jm.task.core.jdbc.dao.UserDaoJDBCImpl;
 import jm.task.core.jdbc.model.User;
 import jm.task.core.jdbc.service.UserServiceImpl;
@@ -15,7 +16,7 @@ import static java.sql.DriverManager.getConnection;
 
 public class Main {
     public static void main(String[] args) throws SQLException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
-        UserServiceImpl userDao = new UserServiceImpl();
+        UserDao userDao = new UserServiceImpl();
         userDao.createUsersTable();
         userDao.saveUser("Name1", "LastName1", (byte) 20);
         userDao.saveUser("Name2", "LastName2", (byte) 25);

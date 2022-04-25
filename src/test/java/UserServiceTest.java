@@ -5,6 +5,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.lang.reflect.InvocationTargetException;
+import java.sql.SQLException;
 import java.util.List;
 
 public class UserServiceTest {
@@ -14,7 +15,7 @@ public class UserServiceTest {
     private final String testLastName = "Ivanov";
     private final byte testAge = 5;
 
-    public UserServiceTest() throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
+    public UserServiceTest() throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException, SQLException {
     }
 
 
